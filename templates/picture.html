@@ -1,0 +1,42 @@
+<div class="pic-container">
+    <div class="picture-wrap">
+        <div class="arrow" id="left-arrow" ng-click="setCurrentDate(-1)">
+            <span class="chevron"><i class="fa fa-chevron-left fa-4x"></i></span>
+        </div>
+        <!-- /#left-arrow.arrow -->
+        <div class="picture" ng-if="picture.media_type == 'image'" ng-style="{'background-image': 'url(' + picture.picurl + ')'}"></div>
+        <!-- /.picture -->
+        <youtube-video ng-if="picture.media_type == 'video'" video-url="picture.url" player-width="'100%'" player-height="'auto'"></youtube-video>
+        <div ng-hide="hideArrow()" class="arrow" id="right-arrow" ng-click="setCurrentDate(1)">
+            <span class="chevron"><i class="fa fa-chevron-right fa-4x"></i></span>
+        </div>
+    </div>
+    <!-- /.picture-wrap -->
+    <div class="site-header">
+        <header>
+        	<div>
+        		<h1 class="site-title">Astronomy Picture <span class="sub-title">of the Day</span></h1>
+        		<span class="disclaimer">&copy; NASA &middot; Site revamped and designed by <a href="http://raesylin.xyz" target="_blank">Rachel Lin</a></span>
+        	</div><!-- /.site-title -->
+            
+            <!-- /.site-title -->
+<!--             <ul class="nav menu">
+                <li class="item">archive</li>
+                <li class="item">index</li>
+                <li class="item">calendar</li>
+                <li class="item">about</li>
+                <li class="item">discuss</li>
+            </ul> -->
+        </header>
+        <div class="today-title">
+            
+			<a href="#today">
+			<h2 class="title-large">{{picture.title}}</h2>
+				<span class="expand">Read detail <i class="fa fa-angle-double-down"></i></span>
+			</a>
+            
+        </div>
+        <!-- /.today-title -->
+    </div>
+    <!-- /.site-header -->
+</div><!-- /.pic-container -->
