@@ -1,5 +1,5 @@
 <div class="pic-container">
-    <div class="picture-wrap">
+    <div class="picture-wrap" ng-swipe-right="setCurrentDate(-1)" ng-swipe-left="setCurrentDate(1)">
         <div class="arrow" id="left-arrow" ng-click="setCurrentDate(-1)">
             <span class="chevron"><i class="fa fa-chevron-left fa-4x"></i></span>
         </div>
@@ -28,6 +28,7 @@
         	<div>
         		<h1 class="site-title">Astronomy Picture <span class="sub-title">of the Day</span></h1>
         		<span class="disclaimer">&copy; NASA &middot; Site revamped and designed by <a href="http://raesylin.xyz" target="_blank">Rachel Lin</a></span>
+                <span class="mobiletip">Swipe right or left for the picture of the next or previous days.</span>
         	</div><!-- /.site-title -->
         </header>
 

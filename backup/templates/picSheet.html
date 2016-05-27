@@ -2,7 +2,7 @@
     <div class="picSheet">
         <div class="close"><a href="#page" class="closeSheet"><i class="fa fa-times fa-4x"></i></a></div>
         <!-- /.closeSheet -->
-        <div class="picture-full" ng-swipe-right="setCurrentDate(-1)" ng-swipe-left="setCurrentDate(1)">
+        <div class="picture-full">
             <div class="pictureX" ng-if="picture.media_type == 'image'">
                 <img ng-src="{{picture.picurl}}" alt="{{picture.title}}" class="picture-full-img" />
             </div>
@@ -10,7 +10,6 @@
             <div class="video embed-responsive embed-responsive-16by9" ng-if="picture.media_type == 'video'">
                 <youtube-video class="embed-responsive-item" video-url="picture.url" player-width="'100%'" player-height="'auto'"></youtube-video>
             </div><!-- /.video embed-responsive embed-responsive-16by9 -->
-            <div class="mobiletip"> Swipe right or left for the picture of the next or previous days.</div><!-- /.mobiletip -->
         </div>
         <!-- /.picture-full -->
         <div class="detail-full">
