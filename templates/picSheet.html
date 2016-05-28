@@ -4,7 +4,7 @@
         <!-- /.closeSheet -->
         <div class="picture-full" ng-swipe-right="setCurrentDate(-1)" ng-swipe-left="setCurrentDate(1)">
             <div class="pictureX" ng-if="picture.media_type == 'image'">
-                <img ng-src="{{picture.picurl}}" alt="{{picture.title}}" class="picture-full-img" />
+                <img ng-src="{{picture.url}}" alt="{{picture.title}}" class="picture-full-img" />
             </div>
             <!-- /.picture -->
             <div class="video embed-responsive embed-responsive-16by9" ng-if="picture.media_type == 'video'">
@@ -18,8 +18,8 @@
             <h2 class="title">{{picture.title}}</h2>
             <p class="description scrollbar-dynamic" data-jquery-scrollbar="jqueryScrollbarOptions">{{picture.explanation}}</p>
             <span class="social">
-				<span class="tool" data-tip="Download this image" tabindex="1">
-					<a href="/mock/placeholder3.jpg" download="picture.jpg"><i class="fa fa-download"></i></a>
+				<span class="tool" data-tip="Download HD image" tabindex="1">
+					<a ng-href="{{picture.hdurl}}" download="picture.jpg"><i class="fa fa-download"></i></a>
 				</span>
 	            <span class="tool" data-tip="Share on Facebook" tabindex="2"><a onclick="FB.ui({
   					method: 'share',
