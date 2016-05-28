@@ -12,7 +12,7 @@
 @header-height-769: 78px;
 @header-background: rgba(64,64,64,.7);
 
-@site-title-font-size: 26px;
+@site-title-font-size: 22px;
 @site-title-color: #F2f2f2;
 @site-title-font-family: ~'"Source Sans Pro", sans-serif';
 @site-title-font-weight: 700;
@@ -96,6 +96,10 @@ body {
 	display: block;
 }
 
+.site-footer {
+	display: none;
+}
+
 .site-footer, 
 .site-wrap:after {
 	height: @footer-height;
@@ -154,9 +158,6 @@ header {
 	background: rgba(10,10,10,.9);
 	width: 100%;
 	height: auto;
-	position: absolute;
-	left: 0;
-	top: @header-height;
 	padding: 0px;
 	// z-index: 99;
 	// text-align: center;

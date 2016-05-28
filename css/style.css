@@ -47,6 +47,9 @@ body {
   content: "";
   display: block;
 }
+.site-footer {
+  display: none;
+}
 .site-footer,
 .site-wrap:after {
   height: 50px;
@@ -96,9 +99,6 @@ header {
   background: rgba(10, 10, 10, 0.9);
   width: 100%;
   height: auto;
-  position: absolute;
-  left: 0;
-  top: 73px;
   padding: 0px;
 }
 .picSheet {
@@ -135,7 +135,7 @@ a {
   color: inherit;
 }
 .site-title {
-  font-size: 26px;
+  font-size: 22px;
   margin-top: 0;
   margin-bottom: 0;
   padding: 20px;
