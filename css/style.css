@@ -149,10 +149,6 @@ a {
 .sub-title {
   font-weight: 300;
 }
-.site-header p {
-  font-size: 13px;
-  color: white;
-}
 .nav.menu {
   display: none;
   padding-left: 30px;
@@ -182,7 +178,7 @@ a {
   justify-content: space-between;
 }
 .description {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 300;
   line-height: 1.8em;
 }
@@ -306,7 +302,7 @@ a {
     position: absolute;
   }
   header {
-    width: 850px;
+    width: auto;
     padding: 1px;
     margin: 10px;
     background: rgba(64, 64, 64, 0.7);
@@ -315,8 +311,9 @@ a {
   .site-title {
     display: block;
     text-shadow: unset;
-    font-size: 48px;
-    padding: 10px 0px 0px 30px;
+    font-size: 32px;
+    padding: 10px 30px 0px 30px;
+    overflow: visible;
   }
   .disclaimer {
     display: inline-block;
@@ -341,9 +338,10 @@ a {
   }
   .today-title {
     display: inline-block;
-    width: 60%;
+    max-width: 35%;
+    width: auto;
     text-align: right;
-    padding-right: 50px;
+    padding-right: 40px;
   }
   .title-large,
   .title {
@@ -472,9 +470,22 @@ a {
     max-height: 500px;
     overflow: auto;
   }
+  .description {
+    font-size: 14px;
+  }
+}
+@media screen and (min-width: 900px) {
+  .site-title {
+    font-size: 48px;
+  }
 }
 @media screen and (min-width: 1000px) {
   .description {
     font-size: 16px;
+  }
+}
+@media screen and (min-width: 1500px) {
+  .site-title {
+    font-size: 56px;
   }
 }

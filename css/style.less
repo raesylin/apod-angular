@@ -18,7 +18,9 @@
 @site-title-font-weight: 700;
 @site-title-font-weight-lighter: 300;
 @site-title-decor-color: white;
-@site-title-font-size-769: 48px;
+@site-title-font-size-769: 32px;
+@site-title-font-size-900: 48px;
+@site-title-font-size-1500: 56px;
 
 @menu-font-family: ~'"Source Sans Pro", sans-serif';
 @menu-font-family-769: ~'"PT Serif", serif';
@@ -31,6 +33,7 @@
 @description-font-weight: 300;
 @description-line-height: 1.8em;
 @description-font-size-769: 14px;
+@description-font-size-mobile: 16px;
 
 @date-color: #cbcbcb;
 @picture-title-color: #6599ac;
@@ -219,11 +222,6 @@ a {
 	font-weight: @site-title-font-weight-lighter;
 }
 
-.site-header p {
-	font-size: 13px;
-	color: @site-title-decor-color;
-}
-
 .nav.menu {
 	display: none;
 	padding-left: 30px;
@@ -258,7 +256,7 @@ a {
 }
 
 .description {
-	font-size: @description-font-size-769;
+	font-size: @description-font-size-mobile;
 	font-weight: @description-font-weight;
 	line-height: @description-line-height;
 }
@@ -413,9 +411,10 @@ a {
 	// Elements
 
 	header {
-		width: 850px;
+		width: auto;
 		padding: 1px;
 		margin: 10px;
+		// max-width: 850px;
 		background: @header-background;
 		border-radius: 5px;
 	}
@@ -425,7 +424,8 @@ a {
 		text-shadow: unset;
 		// margin-bottom: 10px;
 		font-size: @site-title-font-size-769;
-		padding: 10px 0px 0px 30px;
+		padding: 10px 30px 0px 30px;
+		overflow: visible;
 	}
 
 	.disclaimer {
@@ -455,9 +455,10 @@ a {
 
 	.today-title {
 		display: inline-block;
-		width: 60%;
+		max-width: 35%;
+		width: auto;
 		text-align: right;
-		padding-right: 50px;
+		padding-right: 40px;
 	}
 
 	.title-large,
@@ -604,12 +605,27 @@ a {
 		max-height: @scrollbar-maxheight;
 		overflow: auto;
 	}
+	
+	.description {
+		font-size: @description-font-size-769;
+	}
 
+}
 
+@media screen and (min-width: 900px) {
+	.site-title {
+		font-size: @site-title-font-size-900;
+	}
 }
 
 @media screen and (min-width: 1000px) {
 	.description {
 		font-size: @description-font-size-1000;
+	}
+}
+
+@media screen and (min-width: 1500px) {
+	.site-title {
+		font-size: @site-title-font-size-1500;
 	}
 }
