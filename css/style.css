@@ -476,7 +476,7 @@ a {
 }
 @media screen and (min-width: 900px) {
   .site-title {
-    font-size: 48px;
+    font-size: 42px;
   }
 }
 @media screen and (min-width: 1000px) {
