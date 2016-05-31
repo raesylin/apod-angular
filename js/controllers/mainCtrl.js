@@ -67,6 +67,9 @@ angular.module('app')
 	dataService.getPicture($scope.currentDateString)
 		.then(onComplete, onError);
 
+	// -------------------------------------------------------------
+	// Layout control
+
 	// Determine if right arrow should appear
 	$scope.hideArrow = function() {
 		return ($scope.currentDateString == $scope.todayString);
@@ -84,6 +87,22 @@ angular.module('app')
 				console.log('Scrolled to bottom');
 			}
 		}
+	};
+
+	// -------------------------------------------------------------
+	// Sharing control
+
+	$scope.shareFB = function() {
+		FB.ui(
+		{
+			method: 'feed',
+			name: $scope.picture.title,
+			link: 'http://apod.nasa.gov/apod/ap'+$scope.apodURLString,
+			picture: $scope.picture.url,
+			description: $scope.picture.explanation,
+			message: ''
+		}
+		);
 	};
 
 }]);
