@@ -378,6 +378,7 @@ a {
     justify-content: center;
     transition: opacity 0.3s ease-in;
     position: absolute;
+    z-index: 99999;
   }
   .arrow:hover {
     opacity: 0.3;

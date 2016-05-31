@@ -10,6 +10,7 @@ angular.module('app')
 	$scope.todayString = $scope.today.format("YYYY-MM-DD");
 	$scope.currentDate = moment($scope.today);	// Clone today for manipulation
 	$scope.currentDateString = $scope.currentDate.format("YYYY-MM-DD");
+	$scope.apodURLString = $scope.currentDate.format("YYMMDD");
 
 	// $scope.notShowSheet = true;
 
@@ -46,7 +47,7 @@ angular.module('app')
 		$scope.currentDateString = $scope.currentDate.format("YYYY-MM-DD");
 		dataService.getPicture($scope.currentDateString)
 			.then(onComplete, onError);
-
+		$scope.apodURLString = $scope.currentDate.format("YYMMDD");
 	};
 	// -------------------------------------------------------------
 	// Processing data query results

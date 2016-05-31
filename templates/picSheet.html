@@ -23,9 +23,9 @@
 				</span>
 	            <span class="tool" data-tip="Share on Facebook" tabindex="2"><a onclick="FB.ui({
   					method: 'share',
-  					href: 'http://raesylin.xyz/apod/',
+  					href: 'http://apod.nasa.gov/apod/ap{{apodURLString}}.html',
 				}, function(response){});" href="#"><i class="fa fa-facebook-official"></i></a> </span>
-	            <span class="tool" data-tip="Share on Twitter" tabindex="3"><a href="https://twitter.com/intent/tweet"><i class="fa fa-twitter"></i></a></span>
+	            <span class="tool" data-tip="Share on Twitter" tabindex="3"><a href="https://twitter.com/intent/tweet?text={{picture.title}}&url=http%3A%2F%2Fapod.nasa.gov%2Fapod%2Fap{{apodURLString}}.html"><i class="fa fa-twitter"></i></a></span>
 	            <span class="tool" data-tip="Share on Google+" tabindex="4"><i class="fa fa-google-plus"></i></span>
             </span>
         </div>
