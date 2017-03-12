@@ -1,0 +1,63 @@
+.basic-animation {
+	animation-duration: 0.5s;
+	animation-iteration-count: 1;
+	animation-fill-mode: forwards;
+	animation-timing-function: linear;
+}
+
+.pause {
+	animation-delay: 3s;
+}
+
+.slideDown {
+	animation-name: slideDown;
+	@extend .basic-animation;
+}
+
+.slideUp {
+	transform: translate3d(0, -($navbar-height - $navbar-hidden-height), 0);
+}
+
+.slideUp-add,
+.slideUp-remove {
+	transition: transform 0.5s linear;
+}
+
+.show-add,
+.show-remove {
+	transition: transform 0.7s ease-out, width 0.7s ease-out;
+}
+
+.up-add,
+.up-remove {
+	transition: top 0.7s ease-out;
+}
+
+/* Keyframes definition */
+
+
+@keyframes slideDown {
+
+	0% {
+		transform: translate3d(0, 0, 0);
+		background-image: linear-gradient(to bottom, $transparent, black);
+		background-color: transparent;
+	}
+
+	100% {
+		transform: translate3d(0, $navbar-height - $navbar-hidden-height, 0);
+		background-image: linear-gradient(to bottom, $transparent, black $navbar-hidden-height);
+	}
+}
+
+@keyframes slideUp {
+	0% {
+		transform: translate3d(0, 0, 0);
+		background-image: linear-gradient(to top, black $navbar-hidden-height, $transparent);
+	}
+	100% {
+		transform: translate3d(0, - ($navbar-height - $navbar-hidden-height), 0);
+		background-image: linear-gradient(to top, black, $transparent);
+		background-color: transparent;
+	}
+}

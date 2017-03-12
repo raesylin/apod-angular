@@ -1,0 +1,40 @@
+.picture {
+	padding: 2rem 80px;
+
+	@include bp-ultrasmall {
+		padding: 2rem 1.5rem;	
+	}
+}
+
+.copyright {
+	font-size: 0.8rem;
+	font-weight: 300;
+	color: silver;
+
+
+}
+
+.picture-title {
+	cursor: pointer;
+	opacity: 0;
+	transition: opacity 0.5s ease-in;
+	
+	&:focus {
+		outline: none;
+	}
+
+	h2 {
+		margin: 0;
+		font-size: 3.5rem;
+		font-weight: 300;
+		text-shadow: 2px 2px 2px rgba(150, 150, 150, 0.9);
+		display: inline-block;
+	}
+
+	span {
+		margin-left: 2rem;
+		font-size: 0.8rem;
+		font-size: 300;
+	}
+	
+}

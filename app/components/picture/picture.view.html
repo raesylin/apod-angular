@@ -1,0 +1,9 @@
+<div class="picture" ng-style="{'background-image': 'url(' + data.picture.url + ')'}">
+	<span class="copyright" ng-if="data.picture.copyright">
+		&copy; {{data.picture.copyright}}
+	</span>
+	<div class="picture-title" ng-if="!main.content">
+		<h2>{{data.picture.title}}</h2>
+	</div>
+	
+</div>

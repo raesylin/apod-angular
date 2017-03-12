@@ -1,0 +1,23 @@
+<div class="canvas" ng-if="data.picture" ng-class="{'show': main.content}" md-swipe-left="main.changeDate('next')" md-swipe-right="main.changeDate('previous')">
+	<!-- Main picture/video area -->
+	<ng-include src="'app/components/picture/picture.view.html'" scope="" onload="" ng-if="data.picture.media_type === 'image'"></ng-include>
+	<ng-include src="'app/components/video/video.view.html'" scope="" onload="" ng-if="data.picture.media_type === 'video'"></ng-include>
+	<!-- End of main area -->
+	
+	<div class="nav nav-left" ng-click="main.changeDate('previous')">
+		<i class="fa fa-chevron-left fa-4x"></i>
+	</div>
+	<div class="nav nav-right" ng-click="main.changeDate('next')" ng-hide="main.hideNext">
+		<i class="fa fa-chevron-right fa-4x"></i>
+	</div>
+	
+	<div class="toggleContent" ng-click="main.toggleContent(true)" ng-class="{'show': main.content}" ng-switch="main.content">
+		<i class="fa fa-long-arrow-left" ng-switch-when="false"></i>
+		<i class="fa fa-long-arrow-right" ng-switch-when="true"></i>
+	</div><!-- /.toggleSide -->
+
+	<div class="mobile-hint">
+		<p>Swipe left or right for next or previous day's picture.</p>
+	</div>
+
+</div>

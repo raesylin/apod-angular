@@ -1,0 +1,14 @@
+<update-title title="Astronomy Picture of the Day /Revamp/ - {{data.picture.title}}"></update-title>
+<update-meta property="og:title" content="{{data.picture.title}}"></update-meta>
+<update-meta property="og:image" content="{{data.picture.url}}"></update-meta>
+<update-meta property="og:description" content="{{data.picture.explanation}}"></update-meta>
+<update-meta property="og:url" content="http://raesylin.xyz/apod/#/{{data.picture.date}}"></update-meta>
+
+<div class="site-wrapper" style="background-image: url({{data.picture.url}})">
+
+	<canvas-view></canvas-view>
+	<content-view></content-view>
+	<nav-view></nav-view>
+
+
+</div>

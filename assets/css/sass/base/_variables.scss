@@ -1,0 +1,19 @@
+// colors:
+$bg-color: black;
+$transparent: rgba(0,0,0,0);
+
+// navbar:
+$navbar-height: 120px;
+$navbar-hidden-height: 40px;
+$navbar-bg-color: rgba(0, 0, 0, 0.5);
+
+// content:
+$content-width: 500px;
+$content-hidden-width: 0px;
+
+// angular material customization:
+$tooltip-fontsize-lg: 16px;
+$tooltip-height-lg: 32px;
+
+// mobile canvas
+$mobile-canvas-height: calc(100vh - #{$navbar-height});

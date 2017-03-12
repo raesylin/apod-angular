@@ -1,0 +1,20 @@
+<div class="navbar" ng-class="{slideUp: hover}" ng-mouseenter="hover = true" ng-mouseleave="hover = false">
+	<div class="expand">
+		<i class="fa fa-angle-double-up"></i>
+	</div><!-- /.expand -->
+	<div class="row">
+		<div class="site-title">
+			<h1><strong>Astronomy Picture</strong> of the Day</h1> <span>&copy; NASA &middot; Redesigned by <a href="http://raesylin.xyz/" target="_blank">Rachel Lin</a></span>
+		</div><!-- /.site-title -->
+		<div class="search">
+			<md-content layout-padding ng-cloak>
+				<div layout-gt-xs="row">
+					<div flex-gt-xs>
+						<md-datepicker ng-model="nav.thisDay" md-placeholder="Search" md-max-date="nav.today" ng-change="nav.selectDate(nav.thisDay)"></md-datepicker>	
+					</div>
+				</div>
+			</md-content>
+		</div><!-- /.search -->
+	</div><!-- /.row -->
+	
+</div><!-- /.navbar -->

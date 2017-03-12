@@ -1,0 +1,92 @@
+.content {
+
+	position: fixed;
+	right: 0;
+	top: 0;
+	width: $content-width;
+	height: 100vh;
+	transform: translate3d($content-width - $content-hidden-width, 0, 0);
+	display: flex;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-items: flex-start;
+	padding: 5rem 2rem;
+	background: rgba(0,0,0,0.8);
+	transition: top 0.5s ease-in;
+
+	@include bp-ultrasmall {
+		position: static;
+		width: 100%;
+
+		top: $mobile-canvas-height;
+		justify-content: flex-start;
+		padding: 0.5rem 2rem;
+		background: rgba(0, 0, 0, 0.9);
+	}
+}
+
+.content.show {
+	transform: translate3d(0, 0, 0);
+}
+
+.content.up {
+	// transform: translate3d(0, 0px - #{$mobile-canvas-height}, 0);
+	position: absolute;
+	top: 0 !important;
+}
+
+.date {
+	font-size: 1.5rem;
+	font-weight: 300;
+	margin: 0;
+
+	@include bp-ultrasmall {
+		font-size: 1rem;
+		margin-bottom: 0.5rem;
+	}
+}
+
+.title {
+	font-size: 2.5rem;
+	font-weight: 700;
+
+	@include bp-ultrasmall {
+		font-size: 1.5rem;
+		margin: 0;
+		margin-bottom: 1.5rem;
+	}
+}
+
+.explanation {
+	font-weight: 100;
+	font-size: 2.25rem;
+	font-size: 1.25rem;
+	line-height: 2.0rem;
+	width: 100%;
+	height: 28rem;
+	margin-bottom: 2.5rem;
+	// height: 20rem;
+
+	@include bp-ultrasmall {
+		margin-bottom: 1rem;
+	}
+}
+
+.close {
+	opacity: 0;
+
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 0.5rem;
+	width: 50px;
+	height: 50px;
+	font-size: 34px;
+	color: gainsboro;
+	transition: opacity 0.5s linear;
+
+}
+
+.content.up .close {
+	opacity: 1;
+}

@@ -1,0 +1,26 @@
+<div class="interaction" ng-if="data.picture">
+	<span class="tool">
+		<md-tooltip md-direction="top">Download HD image</md-tooltip>
+		<a ng-href="{{data.picture.hdurl}}" download="apod-{{data.picture.date}}.jpg">
+			<i class="fa fa-download"></i>
+		</a>
+	</span>
+	<span class="tool">
+		<md-tooltip md-direction="top">Share on Facebook</md-tooltip>
+		<a href="" ng-click="interact.share('facebook')">
+			<i class="fa fa-facebook-official"></i>
+		</a>
+	</span>
+	<span class="tool">
+		<md-tooltip md-direction="top">Share on Twitter</md-tooltip>
+		<a href="" ng-click="interact.share('twitter')">
+			<i class="fa fa-twitter"></i>
+		</a>
+	</span>
+	<span class="tool">
+		<md-tooltip md-direction="top">Share on Google+</md-tooltip>
+		<a href="" ng-click="interact.share('google')">
+			<i class="fa fa-google-plus"></i>
+		</a>
+	</span>
+</div><!-- /.interaction -->

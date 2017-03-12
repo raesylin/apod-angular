@@ -1,0 +1,141 @@
+.navbar {
+	position: fixed;
+	width: 100%;
+	height: $navbar-height;
+	bottom: - ($navbar-height - $navbar-hidden-height);
+	background-image: linear-gradient(to top, black, $transparent);
+	background-color: transparent;
+	display: flex;
+	flex-wrap: wrap;
+	align-items: space-between;
+
+	@extend .basic-animation;
+	transition: transform 0.5s linear;
+
+	@include bp-ultrasmall {
+		
+		background-image: none;
+		background-color: black;
+	}
+}
+
+.firstload .navbar {
+	// first load animation
+	transform: translate3d(0, -($navbar-height - $navbar-hidden-height), 0);
+}
+
+.expand {
+	width: 100%;
+	height: $navbar-hidden-height;
+	display: flex;
+	justify-content: center;
+	align-items: flex-end;
+	color: gainsboro;
+	font-weight: 300;
+	font-size: 26px;
+	opacity: 0.6;
+
+
+	.fa {
+		margin-bottom: 10px;
+	}
+}
+
+.firstload .expand {
+	display: none;
+}
+
+.slideUp .expand {
+	display: none;
+}
+
+.row {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	align-content: stretch;
+	justify-content: space-between;
+
+	@include bp-ultrasmall {
+		flex-wrap: wrap;
+	}
+}
+
+.site-title {
+	padding-left: 5rem;
+	width: 100%;
+
+	@include bp-ultrasmall {
+		padding-left: 2rem;
+	}
+
+	h1 {
+		white-space: nowrap;
+		font-size: 3rem;
+		margin: 0;
+		margin-right: 1rem;
+		color: white;
+		font-weight: 300;
+		display: inline-block;
+
+		@include bp-ultrasmall {
+			font-size: 1.5rem;
+		}
+	}
+
+	strong {
+		font-weight: 700;
+	}
+
+	span {
+		color: gainsboro;
+		white-space: nowrap;
+		font-weight: 300;
+		font-size: 0.8rem;
+	}
+
+	a {
+		color: #59B6DF;
+	}
+}
+
+.search {
+	
+	margin-right: 5rem;
+
+	md-content {
+
+		padding-top: 0;
+		padding-bottom: 0;
+		color: white;
+		background-color: transparent;
+	}
+
+	md-icon  {
+		color: rgba(255, 255, 255, 0.55);
+	}
+
+	.md-datepicker-expand-triangle {
+		border-top-color: rgba(255, 255, 255, 0.54);
+	}
+
+	.layout-padding {
+		padding-bottom: 0px;
+	}
+
+	::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+	  color: rgba(255, 255, 255, 0.4);
+	}
+	::-moz-placeholder { /* Firefox 19+ */
+	  color: rgba(255, 255, 255, 0.4);
+	}
+	:-ms-input-placeholder { /* IE 10+ */
+	  color: rgba(255, 255, 255, 0.4);
+	}
+	:-moz-placeholder { /* Firefox 18- */
+	  color: rgba(255, 255, 255, 0.4);
+	}
+
+
+}
+

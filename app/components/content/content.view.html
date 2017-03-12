@@ -1,0 +1,7 @@
+<div class="content" ng-class="{'show': main.content, 'up': main.contentUp}" ng-click="main.toggleContentUp()">
+	<div class="close"><i class="fa fa-times"></i></div>
+	<h3 class="date">{{data.picture.date}}</h3><!-- /.date -->
+	<h2 class="title">{{data.picture.title}}</h2><!-- /.title -->
+	<div class="explanation" ng-scrollbars ng-scrollbars-config="main.scrollbarConfig">{{data.picture.explanation}}</div><!-- /.description -->
+	<interaction-view></interaction-view>
+</div><!-- /.content -->

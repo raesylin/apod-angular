@@ -1,0 +1,26 @@
+.interaction {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.interaction > * {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.tool {
+	width: 60px;
+	padding: 10px 5px;
+}
+
+.md-tooltip {
+	font-weight: 300;
+}
+
+.md-panel.md-tooltip {
+	background-color: rgba(0, 150, 136, 1);
+	border-radius: 0;
+}

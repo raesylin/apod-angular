@@ -1,0 +1,20 @@
+// third party
+@import '../libs/jquery.mCustomScrollbar.css';
+
+// Base scss files
+@import 'base/normalize/import-now';
+@import 'base/mixins';
+@import 'base/base';
+@import 'base/variables';
+@import 'base/animation';
+@import 'base/typography';
+@import 'base/angular-material';
+
+// Components
+@import 'components/main';
+@import 'components/canvas';
+@import 'components/navbar';
+@import 'components/video';
+@import 'components/content';
+@import 'components/picture';
+@import 'components/interaction';
